@@ -150,7 +150,7 @@
       answersElement.appendChild(liElement);
 
       liElement.addEventListener('click', (event) => {
-        const unescapedCorrectAnswer = quiz.correct_answer;
+        const unescapedCorrectAnswer = unescapeHTML(quiz.correct_answer);
         // 正解
         if(event.target.innerText === unescapedCorrectAnswer) {
           gameState.numberOfCorrects++;
